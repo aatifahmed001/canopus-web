@@ -1,0 +1,171 @@
+[
+  {
+    "name": "allergies",
+    "title": "Allergies",
+    "icon": "Allergies.png",
+    "api": {
+      "url": "api/allergy",
+      "payload": {},
+      "parameters": [
+        {
+          "name": "accountid",
+          "value": "GLOBAL_ACCOUNT_ID"
+        },
+        {
+          "name": "corpaccountid",
+          "value": "GLOBAL_CORP_ACCOUNT_ID"
+        },
+        {
+          "name": "patientid",
+          "value": "LOCAL_PATIENT_ID"
+        }
+      ]
+    },
+    "attributes": {
+      "title": "allergyname",
+      "details": [
+        "allergyreaction",
+        "allergytype",
+        "severitystatus"
+      ],
+      "lastUsed": "updatedatetime",
+      "state": "allergystatus"
+    },
+    "actions": [
+      {
+        "name": "Reviwed [reviewdate]",
+        "action": "reviewdate"
+      },
+      {
+        "name": "NKDA",
+        "action": "nkda"
+      }
+    ]
+  }, {
+    "name": "immunization",
+    "title": "Immunization",
+    "icon": "Immunization.png",
+    "api": {
+      "url": "api/immunization",
+      "payload": {},
+      "parameters": [
+        {
+          "name": "accountid",
+          "value": "GLOBAL_ACCOUNT_ID"
+        },
+        {
+          "name": "corpaccountid",
+          "value": "GLOBAL_CORP_ACCOUNT_ID"
+        },
+        {
+          "name": "patientid",
+          "value": "LOCAL_PATIENT_ID"
+        }
+      ]
+    },
+    "attributes": {
+      "title": "immunizationname",
+      "details": [
+        "drugdose",
+        "drugstrength",
+        "drugroute"
+      ],
+      "lastUsed": "createdat",
+      "state": "site"
+    },
+    "actions": [
+      {
+        "name": "Reviwed [reviewdate]",
+        "action": "reviewdate"
+      },
+      {
+        "name": "No Know Problems",
+        "action": "nkda"
+      } 
+    ]
+  },  {
+    "name": "medication",
+    "title": "Medication",
+    "icon": "Medication.png",
+    "api": {
+      "url": "api/medication",
+      "payload": {},
+      "parameters": [
+        {
+          "name": "accountid",
+          "value": "GLOBAL_ACCOUNT_ID"
+        },
+        {
+          "name": "corpaccountid",
+          "value": "GLOBAL_CORP_ACCOUNT_ID"
+        },
+        {
+          "name": "patientid",
+          "value": "LOCAL_PATIENT_ID"
+        }
+      ]
+    },
+    "attributes": {
+      "title": "name",
+      "details": [
+        "genericname",
+        "dayssupply",
+        "dose"
+      ],
+      "lastUsed": "lastfilldate",
+      "state": "createdby"
+    },
+    "actions": [
+      {
+        "name": "Reviwed [reviewdate]",
+        "action": "reviewdate"
+      },
+      {
+        "name": "NKDA",
+        "action": "nkda"
+      } 
+    ]
+  },{
+    "name": "document",
+    "title": "Documents",
+    "icon": "Documents.png",
+    "api": {
+      "url": "api/document",
+      "payload": {},
+      "parameters": [
+        {
+          "name": "accountid",
+          "value": "GLOBAL_ACCOUNT_ID"
+        },
+        {
+          "name": "corpaccountid",
+          "value": "GLOBAL_CORP_ACCOUNT_ID"
+        },
+        {
+          "name": "patientid",
+          "value": "LOCAL_PATIENT_ID"
+        }
+      ]
+    },
+    "attributes": {
+      "title": "document_name",
+      "details": [
+        "description",
+        "document_path",
+        "created_by"
+      ],
+      "lastUsed": "update_datetime",
+      "state": "file_ext"
+    },
+    "actions": [
+      {
+        "name": "Reviwed [reviewdate]",
+        "action": "reviewdate"
+      },
+      {
+        "name": "No Know Problems",
+        "action": "nkda"
+      }
+    ]
+  }
+]

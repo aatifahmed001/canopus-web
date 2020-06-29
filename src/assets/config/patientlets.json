@@ -1,0 +1,25 @@
+[
+  {
+    "api": {
+      "url": "api/at-patientdetail",
+      "payload": {},
+      "parameters": [
+        {
+          "name": "accountid",
+          "value": "GLOBAL_ACCOUNT_ID"
+        },
+        {
+          "name": "corpaccountid",
+          "value": "GLOBAL_CORP_ACCOUNT_ID"
+        },
+        {
+          "name": "patientid",
+          "value": "LOCAL_PATIENT_ID"
+        }
+      ]
+    },
+    "attributes": {
+    },
+    "actions": []
+  }
+]
