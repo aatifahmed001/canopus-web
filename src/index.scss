@@ -1,0 +1,346 @@
+$theme-color : #13b3aa;
+$theme-gray-color: #ced4da;
+$HIHGLIGHT_TEXT_COLOR: #13bbac ;
+$MUTED_TEXT_COLOR: #bcbcbc;
+$BASE_BACKGROUND_COLOR: #F8F8F8;
+$CONTAINER_HEADER_BACKGROUND_COLOR: #EDEDED;
+$HEADER_BACKGROUND: #FFF;
+
+@import '../node_modules/react-grid-layout/css/styles.css';
+@import '../node_modules/react-resizable/css/styles.css';
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  margin: 0;
+  background-color: $BASE_BACKGROUND_COLOR !important;
+}
+
+.App-header {
+  background-color: $HEADER_BACKGROUND;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;  
+  padding-top: 6px;
+  padding-left: 10px;
+
+  -webkit-box-shadow: 0px 5px 7px -8px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 5px 7px -8px rgba(0,0,0,0.75);
+  box-shadow: 0px 5px 7px -8px rgba(0,0,0,0.75);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.btn-signup{
+  color: $theme-color;
+  border-color: gray;
+  border-radius: 1000px;
+  font-size: 12px;
+}
+
+.btn-login{
+  color: white;
+  background-color: $theme-color;
+  border-color: $theme-color;
+  border-radius: 1000px;
+}
+
+.login-image{
+  background-image: url("./assets/images/login-image.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 282px;
+  &>p{
+    position: absolute;
+    bottom: -60px;;
+  }
+}
+.logo{
+  background-image: url("./assets/images/logo.png");
+  background-repeat: no-repeat;
+  background-position: left; 
+  height: 100px;
+  width: 200px;
+  background-size: contain;
+  margin-bottom: 40px;
+  margin-top: -40px;
+}
+
+
+.page_view {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+}
+
+.split_panel {   
+   padding: 6% 5%;
+  border-radius: 10px 0px 0px 10px;
+  background-image: url("./assets/images/login-image.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.warning{
+  color: yellow;
+}
+
+.error{
+  color: red;
+}
+
+.grid-wrapper {
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: min-content auto min-content;
+  background-color: #FFAFB0;
+}
+
+aside, header, footer, article, span {
+  padding: 10px;
+}
+
+.text {
+  background-color: #999999;
+  border: 1px solid;
+}
+
+// KM: TODO : Reconcile
+
+.hightlight {
+  color: $HIHGLIGHT_TEXT_COLOR !important;
+}
+
+.muted-text {
+  color: $MUTED_TEXT_COLOR;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.pull-right {
+  position: absolute;
+  right: 10px;
+}
+
+
+.card-loader {
+  height: 100%;
+  padding-top: calc(25% - 21px);
+  padding-left: calc(50% - 21px);
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+
+/* Shimmer */
+
+.shine {
+  > div {
+    background: #f6f7f8;
+    background-image: linear-gradient(to right, #f6f7f8 0%, #cdcdcd 20%, #f6f7f8 40%, #f6f7f8 100%);
+    background-repeat: no-repeat;
+    background-size: 800px 104px; 
+    display: inline-block;
+    position: relative; 
+    
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards; 
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: placeholderShimmer;
+    -webkit-animation-timing-function: linear;
+  }
+}
+
+.nobg {
+  background: none;
+  background-image: none;
+  display: inline-block;
+  position: relative; 
+}
+
+.fill-height-or-more {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: auto;
+    height: 100%;
+  > div {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    border-bottom: 1px solid #efefef;
+    padding-top: 4px;
+    > div {
+      padding-right: 4px;;
+    }
+  }
+}
+
+.icon {
+  height: 11px;
+  width: 11px;
+  flex: 0;
+  border-radius: 50%;
+  vertical-align: top;
+  margin-right: 8px;
+}
+
+.date{
+  height: 5px;
+  width: 50px; 
+  margin-bottom: 8px;
+  display: block;;
+}
+
+.shimmer-text-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2px;
+}
+
+.shimmer-date-container {
+  margin-bottom: 2px;
+}
+.lines {
+  height: 3px;
+  width: 100%; 
+  margin-bottom: 1px;
+  flex: 1;
+}
+
+.head {
+  height: 7px;
+}
+
+.date-head {
+  color: #649A8D;
+}
+
+@-webkit-keyframes placeholderShimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  
+  100% {
+    background-position: 468px 0; 
+  }
+}
+
+
+/* Shimmer */
+
+.actionItem {
+  display: inline-block;
+}
+
+// Scroll
+div.autoscroll {
+  overflow: hidden;
+}
+div.autoscroll:hover {
+  overflow: auto;
+}
+// 
+
+// Overwrite
+.card {
+  border: none !important;
+  border-radius: 0 !important;
+  > .card-header {
+    background-color: $CONTAINER_HEADER_BACKGROUND_COLOR;
+    border-radius: 0;
+    border: none;
+    font-weight: 700;
+    padding: 2px 2px 2px 8px;
+    span {
+      padding: 0px;
+      padding-left: 10px;;
+    }
+  };
+  > .card-body {
+    padding: 4px;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    label {
+      top: 3px;
+      position: relative;
+      padding-left: 8px;
+    }
+  };
+   .head {
+     font-weight: 700;
+     font-size: 9px;
+   }
+}
+
+img{
+  object-fit: contain;
+  }
+
+label {
+  input[type='checkbox'] {
+    margin-right: 8px;
+    position: relative;
+  }
+}
+// Overwrite
+
+// Scrollbar
+div::-webkit-scrollbar-track
+
+div::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+div::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+div::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.1);
+	background-color: #555;
+}
+
+
+
+
+// Scrollbar
+
+.drag-handle {
+  cursor: move !important;
+}
